@@ -7,11 +7,18 @@ using UnityEngine.UI;
 public class MenuController : MonoBehaviour
 {
     public Button btnPlay;
+    public Button btnSetting;
 
     // Start is called before the first frame update
     void Start()
     {
         btnPlay.onClick.AddListener(ChangeToSceneGameplay);
+        btnSetting.onClick.AddListener(SettingSetup);
+    }
+
+    void SettingSetup()
+    {
+        SettingsBox.Setup().Show();
     }
 
     void ChangeToSceneGameplay()

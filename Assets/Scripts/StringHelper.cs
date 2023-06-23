@@ -4,8 +4,8 @@ using UnityEngine;
 
 public static class StringHelper
 {
-    public const string ONOFF_SOUND = "ONOFF_SOUND";
-    public const string ONOFF_MUSIC = "ONOFF_MUSIC";
+    public const string SOUND_VOLUME = "SOUND_VOLUME";
+    public const string MUSIC_VOLUME = "MUSIC_VOLUME";
     public const string ONOFF_VIBRATION = "ONOFF_VIBRATION";
 
     public const string CURRENT_LEVEL = "CURRENT_LEVEL";
@@ -14,6 +14,11 @@ public static class StringHelper
     public const string PATH_CONFIG_LEVEL = "Levels/Level_{0}";
 
     public const string LEVEL = "level";
+}
+
+public class PathPrefab
+{
+    public const string SETTINGS_BOX = "UI/SettingsBox";
 }
 
 public class NameTag

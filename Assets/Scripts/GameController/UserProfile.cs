@@ -21,41 +21,35 @@ public class UserProfile : MonoBehaviour
     {
         get
         {
-            return PlayerPrefs.GetInt(StringHelper.ONOFF_VIBRATION, 1) == 1;
+            return PlayerPrefs.GetInt(StringHelper.ONOFF_VIBRATION) == 1 ? true : false;
         }
         set
         {
             PlayerPrefs.SetInt(StringHelper.ONOFF_VIBRATION, value ? 1 : 0);
-            //MMVibrationManager.SetHapticsActive(value);
-            PlayerPrefs.Save();
         }
     }
 
-    public bool OnSound
+    public float SoundVolume
     {
         get
         {
-            return PlayerPrefs.GetInt(StringHelper.ONOFF_SOUND, 1) == 1;
+            return PlayerPrefs.GetFloat(StringHelper.SOUND_VOLUME);
         }
         set
         {
-            PlayerPrefs.SetInt(StringHelper.ONOFF_SOUND, value ? 1 : 0);
-            //GameController.Instance.musicManager.SetSoundVolume(value ? 1 : 0);
-            PlayerPrefs.Save();
+            PlayerPrefs.SetFloat(StringHelper.SOUND_VOLUME, value);
         }
     }
 
-    public bool OnMusic
+    public float MusicVolume
     {
         get
         {
-            return PlayerPrefs.GetInt(StringHelper.ONOFF_MUSIC, 1) == 1;
+            return PlayerPrefs.GetFloat(StringHelper.MUSIC_VOLUME);
         }
         set
         {
-            PlayerPrefs.SetInt(StringHelper.ONOFF_MUSIC, value ? 1 : 0);
-            //GameController.Instance.musicManager.SetMusicVolume(value ? 0.7f : 0);
-            PlayerPrefs.Save();
+            PlayerPrefs.SetFloat(StringHelper.MUSIC_VOLUME, value);
         }
     }
 }
